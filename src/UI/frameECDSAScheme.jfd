@@ -1,0 +1,361 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.7.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$sizePolicy": 0
+			"title": "ECDSA Scheme"
+			"resizable": false
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentHidden", "thisComponentHidden", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp jlbInfo:::p::p, space :::x, comp jbtPrevKeyGen:::p::p, space u:::p, comp jbtNextKeyGen:::p::p, space :p:10:p, comp jbtSkipKeyGen:::p::p}, comp jspInfo:::::x}, space :::p}}"
+				"$verticalGroup": "par l {seq {space :::p, par b {comp jlbInfo::b:p::p, comp jbtSkipKeyGen::b:p::p, comp jbtNextKeyGen::b:p::p, comp jbtPrevKeyGen::b:p::p}, space :::p, comp jspInfo::::130:x, space :::p}}"
+			} ) {
+				name: "jpInfo"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbInfo"
+					"text": "Keterangan Proses :"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 2, false )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jspInfo"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "jtaInfo"
+						"lineWrap": true
+						"editable": false
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtSkipKeyGen"
+					"text": "skip"
+					"enabled": false
+					"visible": false
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtNextKeyGen"
+					"text": "next"
+					"visible": false
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtPrevKeyGen"
+					"text": "prev"
+					"enabled": false
+					"visible": false
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {par l {seq l {space :p:197:p, comp jlbTitle:::p::p, space :0:0:x}, seq l {space :::p, comp jtpECDSAScheme::::0:x}}, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, comp jlbTitle:::p::p, space :::x, comp jtpECDSAScheme:::p:315:p, space :::p}}"
+			} ) {
+				name: "jpIsi"
+				"minimumSize": new java.awt.Dimension( 0, 0 )
+				"maximumSize": new java.awt.Dimension( 800, 600 )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "jtpECDSAScheme"
+					"font": new java.awt.Font( "Century Gothic", 0, 13 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {par l {seq l {space :::x, comp jbtOK:::p:202:p}, seq l {space :p:23:p, par l {seq {par l {comp jlbA::l:p::p, comp jlbB::l:p::p, comp jlbField:::p::p}, space :p:42:p, par t:::p {seq l {comp label1:::p:14:p, space :::p, comp jtfFieldFp:::p:555:p}, seq l {comp label3:::p:14:p, space :::p, comp jtfB:::p:555:p}, seq l {comp label2:::p:14:p, space :::p, comp jtfA::::0:x}}, space :::p, par l {comp jbtAcakFieldFp::l:p::p, comp jbtAcakA:::p::p, comp jbtAcakB:::p::p}, space :0:0:x}, seq t {par l {seq {comp jlbPrivKeyD:::p::p, space ::34:x, comp label6:::p:14:p}, seq l {comp jlbGx:::p::p, space ::65:x, comp label4:::p:14:p}, seq t {comp jlbGy:::p::p, space :::x, comp label5:::p:14:p}}, space :::p, par l {seq {comp jtfPrivKeyD:::p:354:p, space :::p, comp jbtAcakD:::p::p, space :p::p, comp jbtOK2:::p:202:p}, seq {par l {comp jtfGy:::p:560:p, comp jtfGx::l:p:560:p}, space u:::p, comp jbtAcakPointG:::p::p}}}}}}, space :::p}}"
+						"$verticalGroup": "par l {seq {space :p:19:p, par b {comp label1::b:p::p, comp jbtAcakFieldFp::b:p::p, comp jtfFieldFp::b:p::p, comp jlbField::b:p::p}, space :::p, par b {comp jlbA::b:::x, comp label2::b:p::p, comp jtfA::b:p::p, comp jbtAcakA::b:p::p}, space :::p, par b {comp jlbB::b:::x, comp label3::b:p::p, comp jtfB::b:p::p, comp jbtAcakB::b:p::p}, space :::p, comp jbtOK:::p::p, space u:::p, par l {seq {par l {seq {par b {comp jtfGx::b:p::p, comp label4::b:p::p}, space :p:8:p}, seq t {comp jlbGx:::p::p, space :::p}}, par l {par b {comp jtfGy::b:p::p, comp label5::b:p::p}, comp jlbGy::l:p::p}}, comp jbtAcakPointG::l:p:54:p}, space :::p, par l {comp jlbPrivKeyD::l:p::p, comp jbtOK2::l:p::p, par b:l {comp label6::b:p::p, comp jbtAcakD::b:p::p, comp jtfPrivKeyD::b:p::p}}, space :p:29:p}}"
+					} ) {
+						name: "jpKeyGen"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbField"
+							"text": "Field Fp"
+							"font": new java.awt.Font( "Tahoma", 0, 15 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbA"
+							"text": "a"
+							"font": new java.awt.Font( "Tahoma", 0, 15 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbB"
+							"text": "b"
+							"font": new java.awt.Font( "Tahoma", 0, 15 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": ":"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": ":"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": ":"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfFieldFp"
+							"font": &Font0 new java.awt.Font( "Times New Roman", 0, 14 )
+							"toolTipText": "Tentukan Field Fp : untuk kurva pada Field p Bilangan Prima Besar"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jtfFieldFpMouseEntered", false ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "jtfFieldFpFocusLost", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfA"
+							"font": &Font1 new java.awt.Font( "Times New Roman", 0, 14 )
+							"toolTipText": "Tentukan Konstanta A Bilangan antara 1 - (p-1)"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jtfAMouseEntered", false ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "jtfAFocusLost", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfB"
+							"font": &Font2 new java.awt.Font( "Times New Roman", 0, 14 )
+							"toolTipText": "Tentukan Konstanta B Bilangan antara 1 - (p-1)"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jtfBMouseEntered", false ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "jtfBFocusLost", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtAcakFieldFp"
+							"text": "Acak"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtAcakFieldFpActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtAcakA"
+							"text": "Acak"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtAcakAActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtAcakB"
+							"text": "Acak"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtAcakBActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtOK"
+							"text": "konfirmasi kurva"
+							"font": new java.awt.Font( "Tahoma", 0, 15 )
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtOKActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbGx"
+							"text": "Gx"
+							"font": &Font3 new java.awt.Font( "Tahoma", 0, 15 )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfGx"
+							"font": #Font2
+							"toolTipText": "Tentukan Konstanta B Bilangan antara 1 - (p-1)"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jtfBMouseEntered", false ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "jtfGxFocusLost", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbGy"
+							"text": "Gy"
+							"font": #Font3
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfGy"
+							"font": #Font2
+							"toolTipText": "Tentukan Konstanta B Bilangan antara 1 - (p-1)"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jtfBMouseEntered", false ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "jtfGyFocusLost", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtAcakPointG"
+							"text": "Acak"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtAcakPointGActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label4"
+							"text": ":"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label5"
+							"text": ":"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtOK2"
+							"text": "Parameter siap"
+							"font": &Font4 new java.awt.Font( "Tahoma", 0, 15 )
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtOK2ActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbPrivKeyD"
+							"text": "privat d"
+							"font": #Font4
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label6"
+							"text": ":"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfPrivKeyD"
+							"font": #Font2
+							"toolTipText": "Tentukan Konstanta B Bilangan antara 1 - (p-1)"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jtfBMouseEntered", false ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "jtfPrivKeyDFocusLost", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtAcakD"
+							"text": "Acak"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtAcakDActionPerformed", false ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "KEY GENERATION"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {seq {comp jlbHashType5:::p::p, space :::x, comp jlbHashType6:::p:15:p}, seq l {comp jlbHashType2:::p::p, space :::x, comp jlbHashType4:::p:15:p}, seq {comp jlbHashType:::p::p, space :::p, comp jlbHashType3:::p:15:p, space :0:3:x}}, space :::p, par l {seq {comp jcbHash:::p::p, space :0:0:x}, comp scrollPane1::t:::x, comp jtaHashedMessage::t:::x}}, seq t {space :0:0:x, comp jbtConfirmMessage:::p::p}}, space :::p}}"
+						"$verticalGroup": "par l {seq {space :::p, par b {comp jlbHashType::b:p::p, comp jlbHashType3::b:p::p, comp jcbHash::b:p::p}, space u:::p, par l {comp scrollPane1::l:p:130:p, comp jlbHashType2::l:p::p, comp jlbHashType4::l:p::p}, space :::p, par b {comp jlbHashType5::b:p::p, comp jlbHashType6::b:p::p, comp jtaHashedMessage::b:p:50:p}, space :::p, comp jbtConfirmMessage:::p::p, space ::18:x}}"
+					} ) {
+						name: "jpSignGen"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbHashType"
+							"text": "Hash Message Type"
+							"font": &Font5 new java.awt.Font( "Tahoma", 0, 15 )
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "jcbHash"
+							"font": #Font5
+							addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "jcbHashItemStateChanged", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbHashType2"
+							"text": "Message"
+							"font": #Font5
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbHashType3"
+							"text": ":"
+							"font": #Font5
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbHashType4"
+							"text": ":"
+							"font": #Font5
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane1"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "jtaMessage"
+								"lineWrap": true
+								"wrapStyleWord": true
+								"font": new java.awt.Font( "Times New Roman", 0, 14 )
+								"border": &SoftBevelBorder0 new javax.swing.border.SoftBevelBorder( 1, null, null, null, null )
+								"background": new java.awt.Color( 240, 240, 240, 255 )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbHashType5"
+							"text": "Hashed Message"
+							"font": #Font5
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbHashType6"
+							"text": ":"
+							"font": #Font5
+						} )
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "jtaHashedMessage"
+							"border": #SoftBevelBorder0
+							"wrapStyleWord": true
+							"font": new java.awt.Font( "Times New Roman", 0, 14 )
+							"lineWrap": true
+							"editable": false
+							"background": new java.awt.Color( 240, 240, 240, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtConfirmMessage"
+							"text": "Confirm Message"
+							"font": #Font5
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtConfirmMessageActionPerformed", false ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "SIGNATURE GENERATION"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {comp jlbSignS2::l:p::p, comp jlbSignS::l:p::p, comp jlbSignR::l:p::p}, space u:::p, par l {comp label7::l:p:14:p, comp label8::l:p:14:p, comp label9::l:p:14:p}, space :::p, par l {comp jtfSignS:::::x, comp jtfSignR:::::x, comp scrollPane2::t:::x}}, seq t {space :0:0:x, comp jbtOK3:::p:205:p}}, space :::p}}"
+						"$verticalGroup": "par l {seq l {par l {seq {space :p:15:p, par b {comp jlbSignR::b:p::p, comp label7::b:p::p}}, seq {space :::p, comp jtfSignR:::p::p}}, space u:::p, par l {par b {comp jlbSignS::b:::x, comp label8::b:p::p}, comp jtfSignS:::p::p}, space :::p, par l {par b {comp jlbSignS2::b:p::p, comp label9::b:p::p}, comp scrollPane2:::p:162:p}, space :p:9:p, comp jbtOK3:::p::p, space :p:16:p}}"
+					} ) {
+						name: "jpSignVerification"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbSignR"
+							"text": "Sign r"
+							"font": &Font6 new java.awt.Font( "Tahoma", 0, 15 )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfSignR"
+							"font": #Font0
+							"toolTipText": "Tentukan Field Fp : untuk kurva pada Field p Bilangan Prima Besar"
+							"editable": false
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label7"
+							"text": ":"
+							"font": #Font6
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": ":"
+							"font": #Font6
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbSignS"
+							"text": "Sign s"
+							"font": #Font6
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jtfSignS"
+							"font": #Font1
+							"toolTipText": "Tentukan Konstanta A Bilangan antara 1 - (p-1)"
+							"editable": false
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jbtOK3"
+							"text": "Verifikasi Tanda Tangan"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtOK3ActionPerformed", false ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jlbSignS2"
+							"text": "Message"
+							"font": #Font6
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label9"
+							"text": ":"
+							"font": #Font6
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane2"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "jtaMessage2"
+								"editable": false
+								"background": new java.awt.Color( 240, 240, 240, 255 )
+								"border": new javax.swing.border.SoftBevelBorder( 1, null, null, null, null )
+								"lineWrap": true
+								"wrapStyleWord": true
+							} )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "SIGNATURE VERIFICATION"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbTitle"
+					"text": "ECDSA Scheme"
+					"font": new java.awt.Font( "Magneto", 1, 42 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 800, 600 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

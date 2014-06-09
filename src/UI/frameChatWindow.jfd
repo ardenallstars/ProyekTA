@@ -1,0 +1,44 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.7.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp jspInputMessage::t::314:x, comp jspChatMessage::l::314:x, seq {par l {comp jbtSend::l:p::p, comp jlbTyping:::p::p, comp jlbChatWith::l:p::p}, space :0:0:x}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp jlbChatWith:::p::p, space :::p, comp jspChatMessage:::p:268:p, space :::p, comp jlbTyping:::p::p, space :::p, comp jspInputMessage::::79:x, space :::p, comp jbtSend:::p::p, space :p:6:p}}"
+		} ) {
+			name: "this"
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowOpened", "thisWindowOpened", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jlbChatWith"
+				"text": "chat with"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jlbTyping"
+				"text": "type your message here :"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jspInputMessage"
+				"horizontalScrollBarPolicy": 31
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "jtaInputMessage"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jbtSend"
+				"text": "SEND"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtSendActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jspChatMessage"
+				"horizontalScrollBarPolicy": 31
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "jtaChatMessage"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 350, 475 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

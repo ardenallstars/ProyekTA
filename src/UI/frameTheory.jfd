@@ -1,0 +1,45 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.7.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp label1::::764:x, space :::p}, seq t {space :0:305:x, par l {seq t {comp jlbTitle:::p::p, space :p:309:p}, seq t {comp jbtPrevious:2::p::p, space u:::p, comp jbtNext:2::p::p, space u:::p, comp jbtExit:2::p::p, space :::p}}}}}}"
+			"$verticalGroup": "par l {seq l {space :p:26:p, comp jlbTitle:::p::p, space u:::p, comp label1:::p:426:p, space :::x, par b {comp jbtExit:1:b:p::p, comp jbtNext:1:b:p::p, comp jbtPrevious:1:b:p::p}, space :::p}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentHidden", "thisComponentHidden", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jlbTitle"
+				"text": "Theory"
+				"font": new java.awt.Font( "Magneto", 1, 42 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"border": new javax.swing.border.BevelBorder( 1, null, null, null, null )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jbtExit"
+				"text": "EXIT"
+				"font": &Font0 new java.awt.Font( "Garamond", 1, 20 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtExitActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jbtNext"
+				"text": "NEXT"
+				"font": #Font0
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtNextActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jbtPrevious"
+				"text": "PREVIOUS"
+				"font": #Font0
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtPreviousActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 800, 600 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

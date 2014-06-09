@@ -1,0 +1,112 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.7.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "Chatting Application Implements Elliptical Curve Digital Signature Algorithm"
+			"defaultCloseOperation": 3
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:255:p, par l {comp jbtECDSA:::p::p, comp jbtChatting:::p::p, comp jbtTheory:::p::p, comp jbtAboutUs:::p::p, comp jbtExit:::p::p}, space ::254:x}}"
+				"$verticalGroup": "par l {seq l {comp jbtECDSA:::p::p, space :6:6:p, comp jbtChatting:::p::p, space :6:6:p, comp jbtTheory:::p::p, space :6:6:p, comp jbtAboutUs:::p::p, space :6:6:p, comp jbtExit:::p::p, space :0:15:x}}"
+			} ) {
+				name: "jpTengah"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtECDSA"
+					"text": "ECDSA SCHEME"
+					"font": &Font0 new java.awt.Font( "Times New Roman", 1, 16 )
+					"preferredSize": new java.awt.Dimension( 275, 50 )
+					"toolTipText": "Skema Algoritma Elliptic Curve DSA"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtECDSAActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jbtECDSAMouseEntered", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtChatting"
+					"text": "CHATTING IMPLEMENTATION"
+					"font": #Font0
+					"preferredSize": new java.awt.Dimension( 275, 50 )
+					"toolTipText": "Uji Chatting yang sudah mengimplementasikan Metode ECDSA"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtChattingActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jbtChattingMouseEntered", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtTheory"
+					"text": "THEORY"
+					"font": #Font0
+					"preferredSize": new java.awt.Dimension( 275, 50 )
+					"toolTipText": "Teori-teori yang berhubungan dengan ECDSA"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtTheoryActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jbtTheoryMouseEntered", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtAboutUs"
+					"text": "ABOUT US"
+					"font": #Font0
+					"preferredSize": new java.awt.Dimension( 275, 50 )
+					"toolTipText": "Tentang Pengembang Program"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtAboutUsActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jbtAboutUsMouseEntered", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtExit"
+					"font": #Font0
+					"preferredSize": new java.awt.Dimension( 275, 50 )
+					"action": new FormReference( "action1" )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jbtExitMouseEntered", false ) )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::147:x, comp jlbTitle:::p::p, space :p:143:p}}"
+				"$verticalGroup": "par l {seq l {space :p:25:p, comp jlbTitle:::p::p, space :::x}}"
+			} ) {
+				name: "jpAtas"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbTitle"
+					"text": "Elliptical Curve DSA"
+					"font": new java.awt.Font( "Magneto", 1, 42 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp jlbInfo:::p::p, space :0:0:x}, comp jspInfo:::::x}, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, comp jlbInfo:::p::p, space :::x, comp jspInfo:::p:144:p, space :::p}}"
+			} ) {
+				name: "jpBawah"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jspInfo"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "jtaInfo"
+						"lineWrap": true
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
+						"wrapStyleWord": true
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbInfo"
+					"text": "Info :"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 2, false )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 600 )
+		} )
+		add( new FormNonVisual( "javax.swing.AbstractAction" ) {
+			name: "action1"
+			"$action.Name": "EXIT"
+			"$action.ShortDescription": "Keluar Dari Program"
+			auxiliary() {
+				"JavaCodeGenerator.className": "Action1"
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 610 )
+		} )
+	}
+}

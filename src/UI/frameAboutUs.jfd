@@ -1,0 +1,101 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.7.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"iconImage": sfield com.jformdesigner.model.FormObject NULL_VALUE
+			"title": "About Us"
+			"$sizePolicy": 0
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {comp lblLogo:::p::p, space ::10:x, comp jtaJudulSkripsi:::p:234:p, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :16::x, comp jtaJudulSkripsi:::p::p, space :p:20:p}, seq t {space :0:0:x, comp lblLogo:::p::p}}"
+			} ) {
+				name: "jpAtas"
+				"background": sfield java.awt.Color white
+				"preferredSize": new java.awt.Dimension( 364, 100 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLogo"
+					"icon": new com.jformdesigner.model.SwingIcon( 1, "D:\\PROPOSAL TA\\program designs\\img\\dsIcon2.jpg" )
+				} )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "jtaJudulSkripsi"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"background": sfield java.awt.Color white
+					"text": "IMPLEMENTASI TANDA TANGAN DIGITAL DENGAN MENGGUNAKAN METODE ELLIPTIC CURVE DSA PADA APLIKASI CHATTING"
+					"editable": false
+					"lineWrap": true
+					"wrapStyleWord": true
+					"font": new java.awt.Font( "Times New Roman", 1, 13 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp jlbGaris:::p::p, space ::8:x}, seq t {space :0:30:x, comp jlbMikroskil:::p::p, space s:::p, comp jbtOK:::p::p, space :p:34:p}}}}"
+				"$verticalGroup": "par l {seq t {comp jlbGaris:::p::p, space :::p, par b {comp jlbMikroskil::b:p::p, comp jbtOK::b:p::p}, space ::9:x}}"
+			} ) {
+				name: "jpBawah"
+				"background": sfield java.awt.Color white
+				"preferredSize": new java.awt.Dimension( 364, 52 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbGaris"
+					"text": "________________________________________________"
+					"font": new java.awt.Font( "Courier New", 0, 11 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtOK"
+					"action": new FormReference( "action1" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbMikroskil"
+					"text": "STMIK - MIKROSKIL, MEDAN (C) 2014"
+					"font": new java.awt.Font( "Times New Roman", 1, 12 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"rows": 3
+			} ) {
+				name: "jpTengah"
+				"background": sfield java.awt.Color white
+				"preferredSize": new java.awt.Dimension( 364, 110 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbTugasAkhir"
+					"text": "Tugas Akhir Jurusan Teknik Informatika (S1)"
+					"font": &Font0 new java.awt.Font( "Times New Roman", 1, 15 )
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbMahasiswa1"
+					"text": "Arden Liw (10.111.0460)"
+					"font": #Font0
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jlbMahasiswa2"
+					"text": "Singgih Chongronegoro (10.111.1481)"
+					"font": #Font0
+					"horizontalAlignment": 0
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 370, 290 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+		add( new FormNonVisual( "javax.swing.AbstractAction" ) {
+			name: "action1"
+			"$action.Name": "OK"
+			auxiliary() {
+				"JavaCodeGenerator.className": "actionPerform"
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 300 )
+		} )
+	}
+}

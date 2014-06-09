@@ -1,0 +1,69 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.7.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp jlbName:::p::p, space :p:28:p, comp jtfName:::p:166:p, space :::p, comp jbtLogin:::p::p, space :0:0:x}, comp jtbpUser:::::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp jlbName::b:p::p, comp jtfName::b:p::p, comp jbtLogin::b:p::p}, space :::p, comp jtbpUser:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"title": "Chatting Implementation"
+			"resizable": false
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentHidden", "thisComponentHidden", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jlbName"
+				"text": "Name :"
+				"font": new java.awt.Font( "Arial Narrow", 0, 16 )
+				"labelFor": new FormReference( "jtfName" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jtfName"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jtfNameActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jbtLogin"
+				"text": "LOGIN"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtLoginActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "jtbpUser"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:379:x}"
+					"$verticalGroup": "par l {space :0:375:x}"
+				} ) {
+					name: "jpActivityLog"
+				}, new FormLayoutConstraints( null ) {
+					"title": "activity log"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:379:x}"
+					"$verticalGroup": "par l {space :0:375:x}"
+				} ) {
+					name: "jpPlain"
+				}, new FormLayoutConstraints( null ) {
+					"title": "plain message"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:379:x}"
+					"$verticalGroup": "par l {space :0:375:x}"
+				} ) {
+					name: "jpCipher"
+				}, new FormLayoutConstraints( null ) {
+					"title": "cipher message"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:379:x}"
+					"$verticalGroup": "par l {space :0:375:x}"
+				} ) {
+					name: "jpSignature"
+				}, new FormLayoutConstraints( null ) {
+					"title": "signature"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 420, 490 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
