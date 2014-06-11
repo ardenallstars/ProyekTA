@@ -92,7 +92,7 @@ public class SocketClient implements Runnable {
 		    chatFrame.jbtLogin.setEnabled(true);
 		    chatFrame.jbtSignUp.setEnabled(true);
 		    chatFrame.jtfUserName.setEnabled(true);
-		    chatFrame.jpfPassword.setEnabled(false);
+		    chatFrame.jpfPassword.setEnabled(true);
 		    chatFrame.jtfHostAddr.setEditable(false);
 		    chatFrame.jtfHostPort.setEditable(false);
 		}
@@ -137,7 +137,7 @@ public class SocketClient implements Runnable {
 		    else {
 			chatFrame.model.removeElement(msg.content);
 			chatFrame.model.removeElement(msg.content);
-			chatFrame.jtaMessage.append("[" + msg.sender + " > All] : " + msg.content + "telah signed out\n");
+			chatFrame.jtaMessage.append("[" + msg.sender + " > All] : " + msg.content + " telah signed out\n");
 		    }
 		}
 		else if (msg.type.equals("upload_req")) {

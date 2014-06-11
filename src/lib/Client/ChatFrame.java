@@ -134,6 +134,11 @@ public class ChatFrame extends javax.swing.JFrame {
         jLabel5.setText("Message :");
 
         jbtSendMessage.setText("Send Message");
+        jbtSendMessage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtSendMessageActionPerformed(evt);
+            }
+        });
 
         jbtBrowseFile.setText("...");
         jbtBrowseFile.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +156,11 @@ public class ChatFrame extends javax.swing.JFrame {
 
         jLabel6.setText("File :");
 
-        jtfMessage.setText("jTextField2");
+        jtfMessage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfMessageActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -270,12 +279,11 @@ public class ChatFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtConnectActionPerformed
 
     private void jbtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtLoginActionPerformed
-        String msg = jtfMessage.getText();
-	String target = jlistUserOnline.getSelectedValue().toString();
+        username = jtfUserName.getText();
+	password = jpfPassword.getText();
 	
-	if (!msg.isEmpty() && !target.isEmpty()) {
-	    jtfMessage.setText("");
-	    client.send(new Message("message", username, msg, target));
+	if (!username.isEmpty() && !password.isEmpty()) {
+	    client.send(new Message("login", username, password, "SERVER"));
 	}
     }//GEN-LAST:event_jbtLoginActionPerformed
 
@@ -318,6 +326,24 @@ public class ChatFrame extends javax.swing.JFrame {
 	    jtaMessage.append ("[Aplikasi > Me] : File kebesaran Max 120MB\n");
 	}
     }//GEN-LAST:event_jbtSendFileActionPerformed
+
+    private void SendMessageAction () {
+	String msg = jtfMessage.getText();
+	String target = jlistUserOnline.getSelectedValue().toString();
+	
+	if (!msg.isEmpty() && !target.isEmpty()) {
+	    jtfMessage.setText("");
+	    client.send(new Message("message", username, msg, target));
+	}
+    }
+    
+    private void jbtSendMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtSendMessageActionPerformed
+        SendMessageAction();
+    }//GEN-LAST:event_jbtSendMessageActionPerformed
+
+    private void jtfMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfMessageActionPerformed
+        SendMessageAction();
+    }//GEN-LAST:event_jtfMessageActionPerformed
 
     /**
      * @param args the command line arguments

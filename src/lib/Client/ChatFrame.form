@@ -273,8 +273,13 @@
     </Component>
     <Component class="javax.swing.JButton" name="jbtSendMessage">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Send Message"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor" preCode="&#xa;">
+          <Connection code="&quot;Send Message&quot;" type="code"/>
+        </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtSendMessageActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -312,9 +317,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jtfMessage">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfMessageActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator3">
     </Component>
