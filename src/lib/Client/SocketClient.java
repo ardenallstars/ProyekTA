@@ -32,6 +32,7 @@ public class SocketClient implements Runnable {
     public ObjectInputStream In;
     public ObjectOutputStream Out;
     public History history;
+    private SocketProtocol sp;
     
     public SocketClient(ChatFrame frame) throws IOException {
 	chatFrame = frame;
@@ -199,6 +200,8 @@ public class SocketClient implements Runnable {
     
     void send(Message msg) {
 	try {
+	    sp = new SocketProtocol(serverAddr, port);
+	    
 	    Out.writeObject(msg);
 	    Out.flush();
 	    System.out.println("Outgoing : " + msg.toString());

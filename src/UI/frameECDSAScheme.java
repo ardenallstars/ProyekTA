@@ -19,6 +19,7 @@ import lib.Kurva;
 import lib.MessageToDigest;
 import lib.Point;
 
+
 /**
  * @author arden allstars
  */
@@ -74,12 +75,15 @@ public class frameECDSAScheme extends JFrame {
     }
 
     private void jbtAcakFieldFpActionPerformed() {
-        // TODO add your code here
+	/*
 	Object x[] = new Object[251];
 	for (int i=5; i< 256; i++)
 	    x[i-5] = i;
 	bits = Integer.parseInt(JOptionPane.showInputDialog(new JFrame(), "Tentukan Jumlah Bits", "Acak Bilangan Prima p", JOptionPane.PLAIN_MESSAGE, new ImageIcon(), (Object[]) x, 5) + "");
 	p = new BigInteger(bits, 5, rnd);
+	*/
+	int bit = rnd.nextInt(250);
+	p = new BigInteger(bit+5, 5, rnd);
 	jtfFieldFp.setText(p+"");
 	jtfA.setEnabled(true);
 	jtfB.setEnabled(true);
@@ -564,7 +568,7 @@ public class frameECDSAScheme extends JFrame {
                     });
 
                     //---- jbtOK ----
-                    jbtOK.setText("konfirmasi kurva");
+                    jbtOK.setText("Simpan kurva");
                     jbtOK.setFont(new Font("Tahoma", Font.PLAIN, 15));
                     jbtOK.setEnabled(false);
                     jbtOK.addActionListener(new ActionListener() {
@@ -633,7 +637,7 @@ public class frameECDSAScheme extends JFrame {
                     label5.setText(":");
 
                     //---- jbtOK2 ----
-                    jbtOK2.setText("Parameter siap");
+                    jbtOK2.setText("Simpan Parameter");
                     jbtOK2.setFont(new Font("Tahoma", Font.PLAIN, 15));
                     jbtOK2.setEnabled(false);
                     jbtOK2.addActionListener(new ActionListener() {
@@ -802,7 +806,7 @@ public class frameECDSAScheme extends JFrame {
                 {
 
                     //---- jlbHashType ----
-                    jlbHashType.setText("Hash Message Type");
+                    jlbHashType.setText("Jenis Hash");
                     jlbHashType.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
                     //---- jcbHash ----
@@ -815,7 +819,7 @@ public class frameECDSAScheme extends JFrame {
                     });
 
                     //---- jlbHashType2 ----
-                    jlbHashType2.setText("Message");
+                    jlbHashType2.setText("Pesan");
                     jlbHashType2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
                     //---- jlbHashType3 ----
@@ -839,7 +843,7 @@ public class frameECDSAScheme extends JFrame {
                     }
 
                     //---- jlbHashType5 ----
-                    jlbHashType5.setText("Hashed Message");
+                    jlbHashType5.setText("Pesan Hash");
                     jlbHashType5.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
                     //---- jlbHashType6 ----
@@ -855,7 +859,7 @@ public class frameECDSAScheme extends JFrame {
                     jtaHashedMessage.setBackground(new Color(240, 240, 240));
 
                     //---- jbtConfirmMessage ----
-                    jbtConfirmMessage.setText("Confirm Message");
+                    jbtConfirmMessage.setText("Proses");
                     jbtConfirmMessage.setFont(new Font("Tahoma", Font.PLAIN, 15));
                     jbtConfirmMessage.addActionListener(new ActionListener() {
                         @Override
@@ -885,7 +889,7 @@ public class frameECDSAScheme extends JFrame {
                                                 .addComponent(jlbHashType)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jlbHashType3, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 3, Short.MAX_VALUE)))
+                                                .addGap(0, 4, Short.MAX_VALUE)))
                                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jpSignGenLayout.createParallelGroup()
                                             .addGroup(jpSignGenLayout.createSequentialGroup()
@@ -962,7 +966,7 @@ public class frameECDSAScheme extends JFrame {
                     });
 
                     //---- jlbSignS2 ----
-                    jlbSignS2.setText("Message");
+                    jlbSignS2.setText("Pesan");
                     jlbSignS2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
                     //---- label9 ----
@@ -1064,9 +1068,9 @@ public class frameECDSAScheme extends JFrame {
                     .addGroup(GroupLayout.Alignment.TRAILING, jpIsiLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jlbTitle)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jtpECDSAScheme, GroupLayout.PREFERRED_SIZE, 315, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                        .addContainerGap(7, Short.MAX_VALUE))
             );
         }
         contentPane.add(jpIsi, BorderLayout.CENTER);

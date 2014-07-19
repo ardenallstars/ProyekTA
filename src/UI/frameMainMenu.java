@@ -27,7 +27,7 @@ public class frameMainMenu extends JFrame {
 
     private void jbtChattingActionPerformed(ActionEvent e) {
         // TODO add your code here
-	//frame = new frameChattingImplementation();
+	frame = new frameChattingImplementation();
 	frame.setVisible(true);
 	setVisible(false);
     }

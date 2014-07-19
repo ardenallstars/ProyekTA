@@ -49,7 +49,7 @@ new FormModel {
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {seq {par l {seq l {space :p:197:p, comp jlbTitle:::p::p, space :0:0:x}, seq l {space :::p, comp jtpECDSAScheme::::0:x}}, space :::p}}"
-				"$verticalGroup": "par l {seq t {space :::p, comp jlbTitle:::p::p, space :::x, comp jtpECDSAScheme:::p:315:p, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, comp jlbTitle:::p::p, space :::p, comp jtpECDSAScheme:::p:315:p, space ::7:x}}"
 			} ) {
 				name: "jpIsi"
 				"minimumSize": new java.awt.Dimension( 0, 0 )
@@ -131,7 +131,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "jbtOK"
-							"text": "konfirmasi kurva"
+							"text": "Simpan kurva"
 							"font": new java.awt.Font( "Tahoma", 0, 15 )
 							"enabled": false
 							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtOKActionPerformed", false ) )
@@ -178,7 +178,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "jbtOK2"
-							"text": "Parameter siap"
+							"text": "Simpan Parameter"
 							"font": &Font4 new java.awt.Font( "Tahoma", 0, 15 )
 							"enabled": false
 							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtOK2ActionPerformed", false ) )
@@ -210,13 +210,13 @@ new FormModel {
 						"title": "KEY GENERATION"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {seq {comp jlbHashType5:::p::p, space :::x, comp jlbHashType6:::p:15:p}, seq l {comp jlbHashType2:::p::p, space :::x, comp jlbHashType4:::p:15:p}, seq {comp jlbHashType:::p::p, space :::p, comp jlbHashType3:::p:15:p, space :0:3:x}}, space :::p, par l {seq {comp jcbHash:::p::p, space :0:0:x}, comp scrollPane1::t:::x, comp jtaHashedMessage::t:::x}}, seq t {space :0:0:x, comp jbtConfirmMessage:::p::p}}, space :::p}}"
+						"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {seq {comp jlbHashType5:::p::p, space :::x, comp jlbHashType6:::p:15:p}, seq l {comp jlbHashType2:::p::p, space :::x, comp jlbHashType4:::p:15:p}, seq {comp jlbHashType:::p::p, space :::p, comp jlbHashType3:::p:15:p, space :0:4:x}}, space :::p, par l {seq {comp jcbHash:::p::p, space :0:0:x}, comp scrollPane1::t:::x, comp jtaHashedMessage::t:::x}}, seq t {space :0:0:x, comp jbtConfirmMessage:::p::p}}, space :::p}}"
 						"$verticalGroup": "par l {seq {space :::p, par b {comp jlbHashType::b:p::p, comp jlbHashType3::b:p::p, comp jcbHash::b:p::p}, space u:::p, par l {comp scrollPane1::l:p:130:p, comp jlbHashType2::l:p::p, comp jlbHashType4::l:p::p}, space :::p, par b {comp jlbHashType5::b:p::p, comp jlbHashType6::b:p::p, comp jtaHashedMessage::b:p:50:p}, space :::p, comp jbtConfirmMessage:::p::p, space ::18:x}}"
 					} ) {
 						name: "jpSignGen"
 						add( new FormComponent( "javax.swing.JLabel" ) {
 							name: "jlbHashType"
-							"text": "Hash Message Type"
+							"text": "Jenis Hash"
 							"font": &Font5 new java.awt.Font( "Tahoma", 0, 15 )
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
@@ -226,7 +226,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JLabel" ) {
 							name: "jlbHashType2"
-							"text": "Message"
+							"text": "Pesan"
 							"font": #Font5
 						} )
 						add( new FormComponent( "javax.swing.JLabel" ) {
@@ -252,7 +252,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JLabel" ) {
 							name: "jlbHashType5"
-							"text": "Hashed Message"
+							"text": "Pesan Hash"
 							"font": #Font5
 						} )
 						add( new FormComponent( "javax.swing.JLabel" ) {
@@ -271,7 +271,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "jbtConfirmMessage"
-							"text": "Confirm Message"
+							"text": "Proses"
 							"font": #Font5
 							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtConfirmMessageActionPerformed", false ) )
 						} )
@@ -322,7 +322,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JLabel" ) {
 							name: "jlbSignS2"
-							"text": "Message"
+							"text": "Pesan"
 							"font": #Font6
 						} )
 						add( new FormComponent( "javax.swing.JLabel" ) {
