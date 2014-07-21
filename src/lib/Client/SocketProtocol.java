@@ -17,6 +17,7 @@ import lib.Kurva;
 import lib.Message;
 import lib.MessageToDigest;
 import lib.Point;
+import lib.ECDH;
 
 /**
  *

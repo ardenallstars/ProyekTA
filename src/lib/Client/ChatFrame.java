@@ -29,6 +29,7 @@ public class ChatFrame extends javax.swing.JFrame {
     public String historyFile = "D:/History.xml";
     public HistoryFrame historyFrame;
     public History history;
+    private SocketProtocol sp;
     
     public ChatFrame() {
 	initComponents();
